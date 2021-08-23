@@ -3,10 +3,10 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: master
+    branches: modular-css
 
   pull_request:
-    branches: master
+    branches: modular-css
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,6 +27,6 @@ jobs:
         uses: jovrtn/github-action-wpengine-git-deploy@0.1.2
         env:
           WPENGINE_ENVIRONMENT_NAME: ${{ secrets.WPENGINE_ENVIRONMENT_NAME }}
-          LOCAL_BRANCH: master
+          LOCAL_BRANCH: modular-css
           WPENGINE_SSH_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
           WPENGINE_SSH_KEY_PUBLIC: ${{ secrets.WPENGINE_SSH_KEY_PUBLIC }}
