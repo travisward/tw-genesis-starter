@@ -8,3 +8,5 @@ vendor/
 process.yml
 *.zip
 *.*.json
+mix-manifest.json
+mix.js.map
