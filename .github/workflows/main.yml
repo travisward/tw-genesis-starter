@@ -30,16 +30,18 @@ jobs:
       - run: |
           git fetch --prune --unshallow
 
+      - name: create directory
+        run: |
           mkdir ${{ env.FOLDERNAME }}
           shopt -s extglob
           mv !(${{ env.FOLDERNAME }}) ${{ env.FOLDERNAME }}
-         
-          # Move named folder into a structure identical to the root directory of a WordPress server
+      
+      # Move named folder into a structure identical to the root directory of a WordPress server
+      - name: create directory
+        run: |
           mkdir -p ${{ env.DIRECTORY_PATH }}
           mv ${{ env.FOLDERNAME }} ${{ env.DIRECTORY_PATH }}
           cd ${{ env.DIRECTORY_PATH }}/${{ env.FOLDERNAME }}/
-
-
 
       - name: GitHub Action for WP Engine Git Deployment
         uses: jovrtn/github-action-wpengine-git-deploy@0.1.2
