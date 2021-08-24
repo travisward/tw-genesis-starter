@@ -3,12 +3,11 @@
 /phpcs.xml
 node_modules/
 vendor/
-mix.js.map
 lib/*.css*
 
 # Artifacts
 process.yml
 *.zip
 *.*.json
+*.*.map
 mix-manifest.json
-mix.js.map
