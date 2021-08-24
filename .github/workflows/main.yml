@@ -3,10 +3,10 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: modular-css
+    branches: develop
 
   pull_request:
-    branches: modular-css
+    branches: develop
 
 # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -45,6 +45,6 @@ jobs:
         uses: jovrtn/github-action-wpengine-git-deploy@0.1.2
         env:
           WPENGINE_ENVIRONMENT_NAME: ${{ secrets.WPENGINE_ENVIRONMENT_NAME }}
-          LOCAL_BRANCH: modular-css
+          LOCAL_BRANCH: develop
           WPENGINE_SSH_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
           WPENGINE_SSH_KEY_PUBLIC: ${{ secrets.WPENGINE_SSH_KEY_PUBLIC }}
