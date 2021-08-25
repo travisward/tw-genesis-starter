@@ -23,14 +23,31 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.2.0
+        with:
+          # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
+          node-version: '14.6'
+      - run: npm install 
+
+      - name: Compile production assets
+        run: npm run prod
+      
+      - name: Remove node_modules
+        run: rm -Rf node_modules
+
+      - name: where we at?
+        run: pwd && ls -al
+
       - name: GitHub Action for WP Engine Git Deployment
         uses: wpengine/github-action-wpe-site-deploy@main
         env:
 
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
-          PHP_LINT: TRUE
+          PHP_LINT: FALSE
+          FLAGS: -azvr --inplace --exclude=".*"
           TPO_SRC_PATH: ""
-          TPO_PATH: ""
+          TPO_PATH: "wp-content/themes/tti-starter-tw/"
 
           # Branches & Environments 
           PRD_ENV: ${{ secrets.WPENGINE_ENVIRONMENT_NAME }}
