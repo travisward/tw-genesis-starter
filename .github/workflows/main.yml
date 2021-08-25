@@ -28,7 +28,7 @@ jobs:
         env:
 
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
-          PHP_LINT: FALSE
+          PHP_LINT: TRUE
           TPO_SRC_PATH: ""
           TPO_PATH: ""
 
