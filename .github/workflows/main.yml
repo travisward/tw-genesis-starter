@@ -37,7 +37,7 @@ jobs:
         run: rm -Rf node_modules
 
       - name: where we at?
-        run: pwd
+        run: pwd && ls -al
 
       - name: GitHub Action for WP Engine Git Deployment
         uses: wpengine/github-action-wpe-site-deploy@main
