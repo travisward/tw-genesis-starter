@@ -45,7 +45,7 @@ jobs:
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
           PHP_LINT: FALSE
           TPO_SRC_PATH: ""
-          TPO_PATH: "wp-content/themes/tti-starter-tw/"
+          TPO_PATH: "wp-content/themes/"
           PRD_ENV: ${{ secrets.WPENGINE_ENVIRONMENT_NAME }}
           PRD_BRANCH: develop
 
