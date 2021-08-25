@@ -22,8 +22,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Create Directory
-        run: mkdir -p wp-content/themes/tti-starter-tw/
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.2.0
@@ -37,6 +35,9 @@ jobs:
       
       - name: Remove node_modules
         run: rm -Rf node_modules
+
+      - name: where we at?
+        run: pwd
 
       - name: GitHub Action for WP Engine Git Deployment
         uses: wpengine/github-action-wpe-site-deploy@main
