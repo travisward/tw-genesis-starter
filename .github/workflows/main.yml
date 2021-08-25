@@ -30,13 +30,13 @@ jobs:
         with:
           # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
           node-version: '14.6'
-      - run: cd wp-content/themes/tti-starter-tw/ && npm install 
+      - run: npm install 
 
       - name: Compile production assets
-        run: cd wp-content/themes/tti-starter-tw/ && npm run prod
+        run: npm run prod
       
       - name: Remove node_modules
-        run: cd wp-content/themes/tti-starter-tw/ && rm -Rf node_modules
+        run: rm -Rf node_modules
 
       - name: GitHub Action for WP Engine Git Deployment
         uses: wpengine/github-action-wpe-site-deploy@main
