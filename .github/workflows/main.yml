@@ -36,8 +36,8 @@ jobs:
       - name: Remove node_modules
         run: rm -Rf node_modules
 
-      - name: where we at?
-        run: pwd && ls -al
+      - name: Remove .git
+        run: rm -Rf .git
 
       - name: GitHub Action for WP Engine Git Deployment
         uses: wpengine/github-action-wpe-site-deploy@main
