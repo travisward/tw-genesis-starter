@@ -1,13 +1,13 @@
 {
-	"name": "studiopress/genesis-sample",
+	"name": "ttitamu/tti-genesis-blocks-starter",
 	"type": "wordpress-theme",
 	"description": "Genesis Sample child theme for the Genesis Framework",
-	"homepage": "https://github.com/studiopress/genesis-sample",
+	"homepage": "https://github.com/ttitamu/tti-genesis-blocks-starter",
 	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
-			"name": "StudioPress",
-			"email": "support@studiopress.com"
+			"name": "TTI TAMU",
+			"email": "t-ward@tti.tamu.edu"
 		}
 	],
 	"require": {
@@ -30,7 +30,7 @@
 		"phpcbf": "phpcbf"
 	},
 	"support": {
-		"issues": "https://github.com/studiopress/genesis-sample/issues",
-		"source": "https://github.com/studiopress/genesis-sample"
+		"issues": "https://github.com/ttitamu/tti-genesis-blocks-starter/issues",
+		"source": "https://github.com/ttitamu/tti-genesis-blocks-starter"
 	}
 }

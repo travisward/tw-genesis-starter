@@ -1,22 +1,17 @@
-# Genesis Sample Theme
+# TTI Block Starter Theme
 
-GitHub project link: https://github.com/studiopress/genesis-sample/.
+Based on Genesis Sample Theme, but with modular CSS and Laravel Mix added. https://github.com/studiopress/genesis-sample/.
 
-
-## Installation Instructions
-
-1. Upload the Genesis Sample theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
-2. Go to your WordPress dashboard and select Appearance.
-3. Activate the Genesis Sample theme.
-4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking.
-
-## Theme Support
-
-Please visit https://my.studiopress.com/help/ for theme support.
 
 ## For Developers
 
-The version of [Genesis Sample on GitHub](https://github.com/studiopress/genesis-sample/) includes tooling to check code against WordPress standards. To use it:
+### Getting Started
+
+Use the [Use this template](https://github.com/ttitamu/tti-genesis-blocks-starter/generate) link above to start your own repo for your project and start modifying!
+
+### coding tools
+
+The version of [Genesis Sample Theme](https://github.com/studiopress/genesis-sample/) includes tooling to check code against WordPress standards. To use it:
 
 1. Install Composer globally on your development machine. [See Composer setup steps](https://getcomposer.org/doc/00-intro.md#downloading-the-composer-executable).
 2. In the command line, change directory to the Genesis Sample folder.
@@ -37,14 +32,20 @@ Scripts are also provided to help with CSS linting, CSS autoprefixing, and creat
 
 You can then type any of these commands:
 
+- `npm run watch` to watch sass/js files for changes and compile as needed. Runs `mix watch`.
+- `npm run prod` to compile sass/js files for production. Runs `mix --production`.
+
+Additional tools:
+
 - `npm run autoprefixer` to add and remove vendor prefixes in `style.css`.
 - `npm run makepot` to regenerate the `languages/genesis-sample.pot` file.
 - `npm run lint:css` to generate a report of style violations for `style.css`.
 - `npm run lint:js` to generate a report of style violations for JavaScript files.
 - `npm run fix:js` to fix any JavaScript style violations that can be corrected automatically.
 - `npm run zip` to create a genesis-sample.zip. Files in the `excludes` array in `scripts/makezip.js` are omitted.
+- `npm run hot` to watch sass/js files for changes and compile as needed, but also enable hot reloading when changing component files. Runs `mix watch --hot`.
 
-### Packaging for distribution
+### Packaging for distribution - TTI Likely Won't Do This
 
 1. Follow the install instructions for npm scripts above.
 2. Switch to the git branch you plan to distribute.
