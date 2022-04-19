@@ -43,14 +43,14 @@ jobs:
         uses: wpengine/github-action-wpe-site-deploy@main
         env:
 
-          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
+          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
           PHP_LINT: FALSE
           FLAGS: -azvr --inplace --exclude=".*"
           TPO_SRC_PATH: ""
           TPO_PATH: "wp-content/themes/tti-starter-tw/"
 
           # Branches & Environments 
-          PRD_ENV: ${{ secrets.WPENGINE_ENVIRONMENT_NAME }}
+          PRD_ENV: ${{ secrets.WPENGINE_ENVIRONMENT_DEV }}
           PRD_BRANCH: develop
 
 
